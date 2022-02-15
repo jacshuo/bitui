@@ -2,7 +2,8 @@ import './App.scss';
 
 import React from 'react';
 
-import Typography from '@/components/General/Typography';
+import { Typography } from './lib';
+
 function App() {
   return (
     <>

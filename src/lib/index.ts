@@ -1,5 +1,3 @@
-import Typography from '@/components/General/Typography';
+import typography from './components/General/Typography';
 
-export default {
-  Typography,
-};
+export const Typography = typography;

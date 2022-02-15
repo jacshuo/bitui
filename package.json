@@ -5,15 +5,6 @@
   "private": false,
   "main": "./dist/bitui.umd.js",
   "module": "./dist/bitui.es.js",
-  "exports": {
-    ".": {
-      "import": [
-        "./dist/bitui.es.js",
-        "./dist/style.css"
-      ],
-      "require": "./dist/bitui.umd.js"
-    }
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
