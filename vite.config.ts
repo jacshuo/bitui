@@ -42,6 +42,7 @@ export default defineConfig(({ command, mode }) => {
         formats: ['iife', 'umd', 'es'],
         fileName: (format) => `bitui.${format}.js`,
       },
+      cssCodeSplit: true,
       manifest: true,
       rollupOptions: {
         external: ['react', 'react-dom'],
