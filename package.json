@@ -59,6 +59,8 @@
   "files": [
     "dist",
     "src/lib",
-    "README.md"
+    "README.md",
+    "tsconfig.json",
+    "tsconfig.node.json"
   ]
 }
