@@ -7,7 +7,10 @@
   "module": "./dist/bitui.es.js",
   "exports": {
     ".": {
-      "import": "./dist/bitui.es.js",
+      "import": [
+        "./dist/bitui.es.js",
+        "./dist/style.css"
+      ],
       "require": "./dist/bitui.umd.js"
     }
   },
