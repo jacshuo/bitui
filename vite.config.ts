@@ -49,10 +49,10 @@ export default defineConfig(({ command, mode }) => {
           globals: {
             // react: 'React',
           },
-          sourcemapExcludeSources: true,
+          // sourcemapExcludeSources: true,
         },
       },
-      sourcemap: true,
+      sourcemap: false,
       target: 'esnext',
     },
   };
