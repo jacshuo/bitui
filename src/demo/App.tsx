@@ -2,7 +2,7 @@ import './App.scss';
 
 import React from 'react';
 
-import { Typography } from './lib';
+import { Typography } from '@/index';
 
 function App() {
   return (
