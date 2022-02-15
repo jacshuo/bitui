@@ -1,5 +1,8 @@
 import react from '@vitejs/plugin-react';
+
+const path = require('path');
 import { defineConfig, loadEnv } from 'vite';
+import dts from 'vite-dts';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
@@ -11,7 +14,8 @@ export default defineConfig(({ command, mode }) => {
     },
     resolve: {
       alias: {
-        '@': '/src',
+        '@': '/src/lib',
+        '@demo': '/src/demo',
       },
     },
     css: {
@@ -19,7 +23,8 @@ export default defineConfig(({ command, mode }) => {
       preprocessorOptions: {},
     },
     plugins: [
-      react({ include: '**/*.tsx' }),
+      dts(),
+      react(),
       tsconfigPaths(),
       createHtmlPlugin({
         minify: true,
@@ -30,5 +35,25 @@ export default defineConfig(({ command, mode }) => {
         },
       }),
     ],
+    build: {
+      lib: {
+        entry: path.resolve(__dirname, 'src/lib/index.ts'),
+        name: 'bitui',
+        formats: ['iife', 'umd', 'es'],
+        fileName: (format) => `bitui.${format}.js`,
+      },
+      manifest: true,
+      rollupOptions: {
+        external: ['react', 'react-dom'],
+        output: {
+          globals: {
+            // react: 'React',
+          },
+          sourcemapExcludeSources: true,
+        },
+      },
+      sourcemap: true,
+      target: 'esnext',
+    },
   };
 });

@@ -22,7 +22,15 @@
     "types": [
       "vite/client"
     ],
-    "baseUrl": "src"
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/lib/*"
+      ],
+      "@demo/*": [
+        "./src/demo/*"
+      ]
+    }
   },
   "include": [
     "./src"

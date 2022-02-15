@@ -3,13 +3,21 @@
   "version": "1.0.0",
   "description": "Bit-UI.",
   "private": false,
+  "main": "./dist/bitui.umd.js",
+  "module": "./dist/bitui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/bitui.es.js",
+      "require": "./dist/bitui.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
-    "lint": "yarn lint:format && yarn lint:fix ",
+    "lint": "npm run lint:format && npm run lint:fix ",
     "type-check": "tsc"
   },
   "pre-commit": "lint",
@@ -44,7 +52,13 @@
     "sass": "^1.49.7",
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
+    "vite-dts": "^1.0.4",
     "vite-plugin-html": "^3.0.6",
     "vite-tsconfig-paths": "^3.4.0"
-  }
+  },
+  "files": [
+    "dist",
+    "src/lib",
+    "README.md"
+  ]
 }

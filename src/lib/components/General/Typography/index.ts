@@ -1,7 +1,7 @@
-import Text from './Text';
-import Title from './Title';
 import Link from './Link';
 import Paragraph from './Paragraph';
+import Text from './Text';
+import Title from './Title';
 
 const Typography = {
   Text,
