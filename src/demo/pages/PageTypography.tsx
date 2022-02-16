@@ -43,7 +43,7 @@ const PageTypography: React.FC<any> = () => {
         </Col>
         <Col>
           <Typography.Paragraph>
-            <Typography.Text code>var abc='hello world!';</Typography.Text>
+            <Typography.Text code>{`var abc='hello world!'`}</Typography.Text>
           </Typography.Paragraph>
           <Typography.Paragraph>
             <Typography.Text keyboard>shift</Typography.Text> key
