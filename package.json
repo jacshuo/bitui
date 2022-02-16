@@ -62,7 +62,6 @@
     "src/lib/index.ts",
     "README.md",
     ".eslintrc.js",
-    ".gitignore",
     "tsconfig.json",
     "tsconfig.node.json"
   ]
