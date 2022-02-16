@@ -1,6 +1,6 @@
 {
   "name": "@jacshuo/bitui",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Bit-UI.",
   "private": false,
   "main": "./dist/bitui.umd.js",
