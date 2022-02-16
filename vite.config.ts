@@ -48,7 +48,7 @@ export default defineConfig(({ command, mode }) => {
         external: ['react', 'react-dom', 'react-router-dom'],
         output: {
           globals: {
-            // react: 'React',
+            react: 'React',
           },
           // sourcemapExcludeSources: true,
         },

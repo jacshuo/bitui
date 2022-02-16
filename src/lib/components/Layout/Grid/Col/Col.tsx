@@ -1,7 +1,7 @@
 import cls from 'classnames';
 import React from 'react';
 
-import { IViewPortSize } from '@/components/Layout/Grid/Container/Container';
+import { IViewPortSize } from '../Container/Container';
 
 export interface ICol extends React.HTMLProps<HTMLDivElement>, IViewPortSize {
   span?: number;

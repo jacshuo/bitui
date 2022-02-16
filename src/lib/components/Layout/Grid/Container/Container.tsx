@@ -1,5 +1,3 @@
-import '@/assets/styles/index.scss';
-
 import React from 'react';
 
 export interface IViewPortSize {

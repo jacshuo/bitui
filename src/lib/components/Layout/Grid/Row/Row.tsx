@@ -1,10 +1,7 @@
 import cls from 'classnames';
 import React from 'react';
 
-import {
-  IFlexContainerElement,
-  IViewPortSize,
-} from '@/components/Layout/Grid/Container/Container';
+import { IFlexContainerElement, IViewPortSize } from '../Container/Container';
 
 export interface IRow
   extends React.HTMLProps<HTMLDivElement>,
