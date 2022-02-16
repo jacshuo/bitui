@@ -1,3 +1,4 @@
 import Typography from './General/Typography';
+import Layout from './Layout';
 
-export { Typography };
+export { Layout, Typography };

@@ -45,7 +45,7 @@ export default defineConfig(({ command, mode }) => {
       cssCodeSplit: true,
       manifest: true,
       rollupOptions: {
-        external: ['react', 'react-dom'],
+        external: ['react', 'react-dom', 'react-router-dom'],
         output: {
           globals: {
             // react: 'React',

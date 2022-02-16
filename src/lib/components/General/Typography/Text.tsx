@@ -34,21 +34,18 @@ export interface IEllipsis {
   onEllipsis: (ellipsis: IEllipsis) => void;
 }
 
-export interface ITextProps {
+export interface ITextProps extends React.HTMLProps<HTMLSpanElement> {
   code?: boolean;
   copyable?: boolean | ICopyable;
   delete?: boolean;
-  disabled?: boolean;
   editable?: boolean | IEditable;
   ellipsis?: boolean | Omit<IEllipsis, 'expandable' | 'rows' | 'onExpand'>;
   keyboard?: boolean;
   mark?: boolean;
-  onClick?: (e: React.MouseEvent<any, any>) => void;
   strong?: boolean;
   italic?: boolean;
   type?: 'secondary' | 'success' | 'warning' | 'danger';
   underline?: boolean;
-  className?: string;
   theme?: 'light' | 'dark';
 }
 
@@ -104,6 +101,7 @@ const Text: FC<ITextProps> = (props) => {
 
   return (
     <span
+      role="none"
       className={classNames('bit-text', clsNames)}
       onClick={
         onClick &&

@@ -3,10 +3,9 @@ import './Title.scss';
 import classNames from 'classnames';
 import React, { FC } from 'react';
 
-export interface ITitle {
+export interface ITitle extends React.HTMLProps<HTMLHeadingElement> {
   theme?: 'light' | 'dark';
   level?: number;
-  className?: string;
 }
 
 const Title: FC<ITitle> = ({ level, theme, children, className }) => {
