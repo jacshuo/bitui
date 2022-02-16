@@ -52,10 +52,10 @@ export interface ITextProps extends React.HTMLProps<HTMLSpanElement> {
 const Text: FC<ITextProps> = (props) => {
   const {
     code,
-    // copyable,
-    // disabled,
-    // editable,
-    // ellipsis,
+    copyable,
+    disabled,
+    editable,
+    ellipsis,
     keyboard,
     mark,
     onClick,
@@ -66,6 +66,7 @@ const Text: FC<ITextProps> = (props) => {
     className,
     children,
     theme,
+    ...rest
   } = props;
 
   const clsNames = {
@@ -100,15 +101,7 @@ const Text: FC<ITextProps> = (props) => {
   };
 
   return (
-    <span
-      role="none"
-      className={classNames('bit-text', clsNames)}
-      onClick={
-        onClick &&
-        ((e) => {
-          onClick(e);
-        })
-      }>
+    <span role="none" className={classNames('bit-text', clsNames)} {...rest}>
       {renderNativeElement(children)}
     </span>
   );

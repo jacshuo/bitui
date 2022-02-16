@@ -133,6 +133,7 @@ const Row: React.FC<IRow> = (props) => {
     justifyContentEvenlyLg,
     justifyContentEvenlyXl,
     justifyContentEvenlyXxl,
+    className,
     ...rest
   } = props;
   const clsNames = cls(
@@ -244,6 +245,7 @@ const Row: React.FC<IRow> = (props) => {
       [`gy-xl-${yGutterXl}`]: yGutterXl,
       [`gy-xxl-${yGutterXxl}`]: yGutterXxl,
     },
+    className,
   );
   return (
     <>

@@ -84,15 +84,19 @@ export interface IContainer extends React.HTMLProps<HTMLDivElement>, IViewPortSi
 import cls from 'classnames';
 
 const Container: React.FC<IContainer> = (props) => {
-  const { fluid, sm, md, lg, xl, xxl, ...rest } = props;
-  const clsNames = cls('container', {
-    'container-fluid': fluid,
-    'container-sm': sm,
-    'container-md': md,
-    'container-lg': lg,
-    'container-xl': xl,
-    'container-xxl': xxl,
-  });
+  const { fluid, sm, md, lg, xl, xxl, className, ...rest } = props;
+  const clsNames = cls(
+    'container',
+    {
+      'container-fluid': fluid,
+      'container-sm': sm,
+      'container-md': md,
+      'container-lg': lg,
+      'container-xl': xl,
+      'container-xxl': xxl,
+    },
+    className,
+  );
   return (
     <>
       <div className={clsNames} {...rest}>
